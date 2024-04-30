@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- favIcon -->
+    <link rel="icon" href="imgs/logo(4).png" type="image/x-icon">
+    <!-- main css link -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- icons link-->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- titel for page -->
+    <title>Secant Method</title>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light py-0" id="mainNav">
+        <div class="nav container ">
+          <a class="navbar-brand" href="index.html"><img src="imgs/logo (3).png" alt=""></a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 fw-bold">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Methods
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item " href="Bisection.html">Bisection</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="False Position.html">False Position</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="fixed point .html">Simple Fixed Point</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="Newton.html">Newton</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="Secant Method.html">Secant</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Matreces
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item " href="gaussian-elimination.html">Gauss Elimination</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="gaussJordan.html">Gauss Jordan</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="LUdecomposition.html">Lu Decomposition</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="cramer.html">Cramer</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="me.html">About me</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+
+    <!-- input values section -->
+
+    <section class="bisectionSec">
+        <div class="row w-100 justify-content-center ">
+            <div class="col-sm-4">
+                <img class="bran" src="imgs/brain2.gif">
+            </div>
+            <div class="col-md-7 p-4 bimethod bg-black justify-content-center">
+                <h1>Secant Method</h1>
+                <p>What is a Secant Method? The tangent line to the curve of y = f(x) with the point of tangency (x0,
+                    f(x0) was used in Newton's approach. The graph of the tangent line about x = α is essentially the
+                    same as the graph of y = f(x) when x0 ≈ α. The root of the tangent line was used to approximate α.
+                </p>
+                <div class="biform">
+                    <div class="einput">
+                        <div for="equation" class="equation">Equation</div>
+                        <input type="text" name="equation" id="equation" required>
+
+                    </div>
+                    <div class="row ">
+                        <div class="col fixedform">
+                            <label for="xl" id="label-xl">X<sub>i-1</sub></label>
+                            <input type="text" name="xl" id="xl" required>
+
+                        </div>
+                        <div class="col fixedform">
+                            <label for="xu" id="label-xu">X<sub>i</sub></label>
+                            <input type="text" name="xu" id="xu" required>
+                        </div>
+                        <div class="col fixedform">
+                            <label for="eps" id="label-eps">EPS</label>
+                            <input type="text" name="esp" id="esp" required>
+                        </div>
+                        <br>
+                        <div class="formBtn">
+                            <button value="calculate" id="btn">calculate</button>
+                            <button value="Clear" id="clear">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- print result section -->
+
+    <section class="tablesec text-center " id="middle">
+        <div class=" w-75 h-50 m-auto">
+            <table class="table">
+                <tr>
+                    <th>i</th>
+                    <th>X<sub>i-1</sub></th>
+                    <th>f(X<sub>i-1</sub>)</th>
+                    <th>X<sub>i</sub></th>
+                    <th>f(x<sub>i</sub>)</th>
+                    <th>error</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <h3 class="the-root py-5 text-black m-auto">The Root = </h3>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="footer ">
+        <div class="row m-0 fw-bold ">
+            <div class="col ">
+                <a href="index.html"><img src="imgs/logo(4).png" class="NAimg "></a>
+            </div>
+            <div class="col-8">
+                <div class="row m-0 align-items-center">
+                    <div class="col p-3 ms-5">
+                        <p class="desc">
+                            <a href="Bisection.html">Bisection</a><br>
+                            <a href="False Position.html">False Position</a><br>
+                            <a href="fixed point .html">Simple Fixed Point</a><br>
+                            <a href="Newton.html">Newton</a><br>
+                            <a href="Secant Method.html">Secant</a>
+                        </p>
+                    </div>
+                    <div class="col p-3">
+                        <p class="desc">
+                            <a href="gaussian-elimination.html">Gauss Elimination</a><br>
+                            <a href="LUdecomposition.html">LU Decomposition</a><br>
+                            <a href="cramer.html">Cramer’s Rules</a><br>
+                            <a href="gaussJordan.html">Gauss Jordan</a><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- scripts links -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src='js/jquery-3.6.4.min.js'></script>
+    <script src='Secant Method.js'></script>
+</body>
+
+</html>

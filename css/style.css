@@ -1,0 +1,390 @@
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+    background-color: white;
+    height: fit-content;
+    z-index: 999;
+}
+
+.navbar-brand img {
+    width: 100%;
+    height: 80px;
+
+}
+
+.masthead {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/header.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.layer {
+    position: absolute;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.762);
+
+}
+.myheader h1 {
+    border-right: solid 3px #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bolder;
+}
+
+/* Animations */
+.myheader h1 {
+    animation: animated-text 4s steps(25, end) 1s normal both,
+        animated-cursor 600ms steps(25, end) infinite;
+    animation-iteration-count: infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+
+    to {
+        width:600px;
+    }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+    from {
+        border-right-color: #000000;
+    }
+
+    to {
+        border-left-color: transparent;
+    }
+}
+
+.title {
+    font-size: 50px;
+    color: white;
+    opacity: 80%;
+   
+}
+
+.link-card {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.icons {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 20%;
+    position: absolute;
+    bottom: 95px;
+    left: 40%;
+    text-align: center;
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #212529;
+}
+
+.card {
+    background-color: #212529;
+    width: 18rem;
+    height: 7rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 3px 20px #00000075;
+}
+
+.NAimg {
+    margin-left: 2%;
+    width: 50%;
+    height: 130px;
+}
+
+.footer {
+    background-color: rgb(0, 0, 0);
+}
+
+.desc a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.desc a:hover {
+    color: #a8a8a8;
+}
+
+.footer-section {
+    width: 100%;
+    padding: 1% 0;
+    background: #000000;
+}
+
+
+
+.footer-copyright {
+    margin: auto;
+
+}
+
+.footer-copyright a {
+    color: #ffffff;
+    transition: 1s;
+}
+
+.footer-copyright a:hover {
+    color: #a8a8a8;
+}
+
+.copyright {
+    width: fit-content;
+    font-size: 15px;
+    color: #fff;
+    margin-left: 35%;
+    letter-spacing: 3px;
+    font-family: Arial, Tahoma, sans-serif;
+}
+.copyright a{
+    text-decoration: none;
+
+}
+.social-links{
+    margin-left: 3%;
+}
+.social-links a {
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 5%;
+    transition: 1s;
+}
+
+.social-links a:hover {
+    color: #a8a8a8;
+}
+
+
+ 
+/* bisection page */
+.bisectionSec {
+    width: 100%;
+    background-color: #a8a8a8;
+    color: #a8a8a8;
+    padding: 3% 0 0 0;
+}
+
+.bimethod {
+    border-radius: 15px;
+    box-shadow: 2px 3px 20px #000000;
+    margin-bottom: 5%;
+}
+
+.biform {
+    width: 80%;
+
+}
+
+.einput input {
+    width: 100%;
+    margin-bottom: 2%;
+    outline: none;
+}
+
+.fixedform input {
+    width: 100%;
+    outline: none;
+}
+
+.ginput input {
+    height: 45px;
+    width: 42px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+input {
+
+    padding: 10px 5px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ediv label {
+    font-size: 25px;
+    padding-right: 4px;
+}
+
+.formBtn {
+    width: 100%;
+    padding: 10px 30px 0 0;
+
+}
+
+.formBtn button{
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background-color: #00305e;
+    color: white;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.formBtn button:hover {
+    width: 25%;
+    background-color: #00417d;
+}
+
+.bran{
+    width: 100%;
+    height: 403px;
+    border-radius: 15px;
+}
+
+.tablesec {
+    background-color: #a8a8a8;
+    color: #a8a8a8;
+
+}
+.solution{
+    font-size: 50px;
+    font-weight: bold;
+
+}
+.table tr th {
+    background-color: black;
+    color: #a8a8a8;
+
+}
+
+.table td,
+.table th {
+    border: 2px solid #a8a8a8;
+}
+
+.soldiv {
+    width: 60%;
+    height: 600px;
+    margin:0 20%;
+    padding: 5%;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(178, 178, 178);
+}
+
+
+/* about team page */
+
+.cardSection{
+    margin: auto;
+    background-color: #a8a8a8;
+} 
+  
+.profile-wrapper {
+    width: 22rem;
+    height: 28rem;
+    margin-top: 2%;
+    position: relative;
+}
+
+.profile {
+    position: relative;
+    width:100%;
+    height: 400px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.5s;
+}
+ 
+.profile .profile-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: var(--background);
+    transition: .5s;
+}
+
+.profile-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile:hover img {
+    opacity: 0.4;
+    transition: .5s;
+}
+
+.profile:hover .profile-image {
+    transform: translateY(-107px);
+    transition: all .9s;
+}
+
+.profile:hover .profile-bio {
+    opacity: 0.9; 
+}
+
+
+.profile-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 27%;
+    padding: 0.75rem 0.875rem;
+    z-index: 1;
+    color: #a8a8a8;
+    background-color: #000000;
+    text-align: left;
+}
+
+.profile:hover .profile-name {
+    background-color: #000000;
+}
+
+.profile-name h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.btnn{
+    background-color: red;
+    width: fit-content;
+    margin-top: 2%;
+    margin-right: 5%;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+}

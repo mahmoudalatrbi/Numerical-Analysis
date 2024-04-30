@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- favIcon -->
+    <link rel="icon" href="imgs/logo(4).png" type="image/x-icon">
+    <!-- main css link -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- icons link-->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- titel for page -->
+    <title>Gauss Jordan</title>
+</head>
+
+<body>
+
+   <!-- Navbar -->
+
+   <nav class="navbar navbar-expand-lg navbar-light py-0" id="mainNav">
+    <div class="nav container ">
+      <a class="navbar-brand" href="index.html"><img src="imgs/logo (3).png" alt=""></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0 fw-bold">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Methods
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item " href="Bisection.html">Bisection</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="False Position.html">False Position</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="fixed point .html">Simple Fixed Point</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="Newton.html">Newton</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="Secant Method.html">Secant</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Matreces
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item " href="gaussian-elimination.html">Gauss Elimination</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="gaussJordan.html">Gauss Jordan</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="LUdecomposition.html">Lu Decomposition</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="cramer.html">Cramer</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="me.html">About me</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- input values section -->
+
+    <section class="bisectionSec pb-5" id="container">
+        <div class="col-md-7 p-4  bimethod bg-black m-auto text-center">
+            <h1>Gauss Jordan</h1>
+            <h3>Variables</h3>
+            <div class="biform mt-4 m-auto">
+                <form id="master">
+                    <div class="row  mb-3 row-cols-md-4 align-items-center">
+                        <div class="col ginput">
+                            <input id="a00" class="" placeholder="7">
+                            <label>X1</label>
+                        </div>
+                        <div class="col ginput">
+                            <input id="a01" class="" placeholder="5">
+                            <label>X2</label>
+                        </div>
+                        <div class="col ginput">
+                            <input id="a02" class="" placeholder="1">
+                            <label>X3</label>
+                        </div>
+                        <div class="col ginput">
+                            <div class="ediv d-flex  align-items-center">
+                                <label>=</label>
+                                <input id="a03" placeholder="3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  mb-3 row-cols-md-4 align-items-center">
+                        <div class="col ginput">
+                            <input id="a10" class="" placeholder="2">
+                            <label>X1</label>
+
+                        </div>
+                        <div class="col ginput">
+                            <input id="a11" class="" placeholder="12">
+                            <label>X2</label>
+                        </div>
+                        <div class="col ginput">
+                            <input id="a12" class="" placeholder="0">
+                            <label>X3</label>
+                        </div>
+                        <div class="col ginput">
+                            <div class="ediv d-flex  align-items-center">
+                                <label>=</label>
+                                <input id="a13" placeholder="13">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  mb-3 row-cols-md-4 align-items-center">
+                        <div class="col ginput">
+
+                            <input id="a20" class="" placeholder="4">
+                            <label>X1</label>
+                        </div>
+                        <div class="col ginput">
+                            <input id="a21" class="" placeholder="1">
+                            <label>X2</label>
+
+                        </div>
+                        <div class="col ginput">
+                            <input id="a22" class="" placeholder="3">
+                            <label>X3</label>
+
+                        </div>
+                        <div class="col ginput">
+                            <div class="ediv d-flex  align-items-center">
+                                <label>=</label>
+                                <input id="a23" placeholder="23">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div id="masterMethod" class="formBtn pt-3">
+                    <button onclick="setup(3)" id="gaussJordanBtn" class="button">Calculate</button>
+                    <button value="Clear" id="clear">Clear</button>
+                </div>
+                <button id="partialBtn" onclick="partial()" class="btnn">Partial Pivot = OFF</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- print result section -->
+
+    <section class="tablesec  pb-5 m-auto fw-bold  ">
+        <h1 class="solution text-black text-center mb-3" >Solution</h1>
+        <textarea disabled id="resultText" class="soldiv bg-black "></textarea>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="footer ">
+        <div class="row m-0 fw-bold ">
+            <div class="col ">
+                <a href="index.html"><img src="imgs/logo(4).png" class="NAimg "></a>
+            </div>
+            <div class="col-8">
+                <div class="row m-0 align-items-center">
+                    <div class="col p-3 ms-5">
+                        <p class="desc">
+                            <a href="Bisection.html">Bisection</a><br>
+                            <a href="False Position.html">False Position</a><br>
+                            <a href="fixed point .html">Simple Fixed Point</a><br>
+                            <a href="Newton.html">Newton</a><br>
+                            <a href="Secant Method.html">Secant</a>
+                        </p>
+                    </div>
+                    <div class="col p-3">
+                        <p class="desc">
+                            <a href="gaussian-elimination.html">Gauss Elimination</a><br>
+                            <a href="LUdecomposition.html">LU Decomposition</a><br>
+                            <a href="cramer.html">Cramer’s Rules</a><br>
+                            <a href="gaussJordan.html">Gauss Jordan</a><br>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- copyright  -->
+
+<div class="footer-section">
+    <div class="container2">
+      <div class="all-footer">
+
+        <div class="footer-copyright row m-0 align-items-center justify-content-evenly">
+          
+          <div class="col social-links">
+            <a href="https://www.instagram.com/mahmoud66__?utm_source=qr"><i class="fab fa-instagram"></i></a>
+            <a
+              href="https://www.linkedin.com/in/mahmoud-alatrby-296777254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i
+                class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/malatrbi.uwk?mibextid=LQQJ4d"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/message/YWHLDTZZXFK3M1?src=qr"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/mahmoudalatrbi"><i class="fab fa-github"></i></a>
+          </div>
+
+          <div class="col copyright">
+
+            © Copyright by
+
+            <a href="tel:01069555970">
+              3trby <i class="fa fa-heart"></i>.
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- scripts links -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="math.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
